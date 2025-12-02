@@ -580,7 +580,11 @@ fun SettingScreen() {
                             onValueChangeFinished = {
                                 BackgroundConfig.save(context)
                             },
-                            valueRange = 0f..1f
+                            valueRange = 0f..1f,
+                            colors = androidx.compose.material3.SliderDefaults.colors(
+                                thumbColor = MaterialTheme.colorScheme.primary.copy(alpha = 1f),
+                                activeTrackColor = MaterialTheme.colorScheme.primary.copy(alpha = 1f)
+                            )
                         )
                     }
                 )
@@ -600,7 +604,11 @@ fun SettingScreen() {
                             onValueChangeFinished = {
                                 BackgroundConfig.save(context)
                             },
-                            valueRange = 0f..1f
+                            valueRange = 0f..1f,
+                            colors = androidx.compose.material3.SliderDefaults.colors(
+                                thumbColor = MaterialTheme.colorScheme.primary.copy(alpha = 1f),
+                                activeTrackColor = MaterialTheme.colorScheme.primary.copy(alpha = 1f)
+                            )
                         )
                     }
                 )
