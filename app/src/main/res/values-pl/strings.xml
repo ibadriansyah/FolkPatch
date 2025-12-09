@@ -403,6 +403,6 @@
 
     <!-- Auto-added missing strings -->
     <string name="settings_simple_kernel_version_mode_summary">Ukryj informacje o wersji na karcie roboczej, gdy włączone</string>
-    <string name="app_name" translatable="false">FolkPatch</string>
+    <string name="app_name" translatable="false">Salsa-Patch</string>
     <string name="settings_simple_kernel_version_mode">Zwięzły tryb wersji jądra</string>
 </resources>

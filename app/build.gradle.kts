@@ -70,7 +70,7 @@ android {
     defaultConfig {
         buildConfigField("String", "buildKPV", "\"$kernelPatchVersion\"")
 
-        base.archivesName = "FolkPatch_${managerVersionCode}_${managerVersionName}_on_${branchname}"
+        base.archivesName = "Salsa-Patch_${managerVersionCode}_${managerVersionName}_on_${branchname}"
     }
 
     compileOptions {
