@@ -3,6 +3,7 @@
     <string-array name="languages">
         <item>@string/system_default</item>
         <item>English</item>
+        <item>Bahasa Indonesia</item>
         <item>Polski</item>
         <item>Русский</item>
         <item>日本語</item>
@@ -15,6 +16,7 @@
     <string-array name="languages_values">
         <item>default</item>
         <item>en</item>
+        <item>id</item>
         <item>pl</item>
         <item>ru</item>
         <item>ja</item>
