@@ -409,4 +409,43 @@
     <!-- Auto-added missing strings -->
     <string name="settings_simple_kernel_version_mode_summary">Скрыть информацию о версии в рабочей карточке, когда включено</string>
     <string name="settings_simple_kernel_version_mode">Лаконичный режим версии ядра</string>
+
+    <!-- Home Layout Strings -->
+    <string name="settings_home_layout_style">Стиль главной страницы</string>
+    <string name="settings_home_layout_default">ListUI</string>
+    <string name="settings_home_layout_grid">GridUI</string>
+    <string name="unofficial_version_title">Неофициальная версия</string>
+    <string name="unofficial_version_message">Вы используете FolkPatch, который не является официальным приложением, пожалуйста, скачайте официальное приложение!</string>
+    <string name="go_to_github">Перейти на Github</string>
+    <string name="settings_save_theme">Сохранить тему</string>
+    <string name="settings_import_theme">Импортировать тему</string>
+    <string name="settings_theme_saved">Тема сохранена</string>
+    <string name="settings_theme_imported">Тема импортирована</string>
+    <string name="settings_theme_save_failed">Не удалось сохранить тему</string>
+    <string name="settings_theme_import_failed">Не удалось импортировать тему</string>
+
+    <!-- Theme Strings -->
+    <string name="theme_export_title">Экспорт темы</string>
+    <string name="theme_import_title">Импорт темы</string>
+    <string name="theme_name">Название темы</string>
+    <string name="theme_type">Тип темы</string>
+    <string name="theme_type_phone">Телефон</string>
+    <string name="theme_type_tablet">Планшет</string>
+    <string name="theme_version">Версия</string>
+    <string name="theme_author">Автор</string>
+    <string name="theme_description">Описание</string>
+    <string name="theme_export_action">Экспорт</string>
+    <string name="theme_import_action">Импорт</string>
+    <string name="theme_import_confirm">Вы уверены, что хотите импортировать эту тему?</string>
+    <string name="theme_info">Информация о теме</string>
+    <!-- Grid Working Card Background -->
+    <string name="settings_grid_working_card_background">Фон рабочей карточки</string>
+    <string name="settings_grid_working_card_background_enabled">Пользовательский фон карточки включен</string>
+    <string name="settings_grid_working_card_background_summary">Пользовательское фоновое изображение для рабочей карточки</string>
+    <string name="settings_grid_working_card_background_selected">Фон выбран</string>
+    <string name="settings_clear_grid_working_card_background">Очистить фон карточки</string>
+    <string name="settings_clear_grid_working_card_background_confirm">Вы уверены, что хотите очистить фоновое изображение карточки?</string>
+    <string name="settings_grid_working_card_background_saved">Фон карточки успешно сохранен</string>
+    <string name="settings_grid_working_card_background_error">Не удалось сохранить фон карточки</string>
+    <string name="settings_grid_working_card_background_cleared">Фон карточки очищен</string>
 </resources>

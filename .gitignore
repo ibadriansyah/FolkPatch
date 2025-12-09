@@ -6,12 +6,13 @@ local.properties
 build
 captures
 .cxx
-key.jks
-key.jks.base64.txt
-keystore.jks
-keystore.properties
 *.keystore
 *.jks
+keystore.properties
+
+# FolkPatch specific signing files
+app/folkpatch-release*.jks
+keystore.properties
 .vscode
 .kotlin
 app/src/main/resources/

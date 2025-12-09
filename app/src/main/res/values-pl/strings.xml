@@ -405,4 +405,45 @@
     <string name="settings_simple_kernel_version_mode_summary">Ukryj informacje o wersji na karcie roboczej, gdy włączone</string>
     <string name="app_name" translatable="false">Salsa-Patch</string>
     <string name="settings_simple_kernel_version_mode">Zwięzły tryb wersji jądra</string>
+
+    <!-- Home Layout Strings -->
+    <string name="settings_home_layout_style">Styl strony głównej</string>
+    <string name="settings_home_layout_default">ListUI</string>
+    <string name="settings_home_layout_grid">GridUI</string>
+    
+    <!-- Unofficial Version Strings -->
+    <string name="unofficial_version_title">Wersja nieoficjalna</string>
+    <string name="unofficial_version_message">Używasz FolkPatch, który nie jest oficjalną aplikacją, pobierz oficjalną aplikację!</string>
+    <string name="go_to_github">Przejdź na Github</string>
+    <string name="settings_save_theme">Zapisz motyw</string>
+    <string name="settings_import_theme">Importuj motyw</string>
+    <string name="settings_theme_saved">Motyw zapisany</string>
+    <string name="settings_theme_imported">Motyw zaimportowany</string>
+    <string name="settings_theme_save_failed">Nie udało się zapisać motywu</string>
+    <string name="settings_theme_import_failed">Nie udało się zaimportować motywu</string>
+
+    <!-- Theme Strings -->
+    <string name="theme_export_title">Eksportuj motyw</string>
+    <string name="theme_import_title">Importuj motyw</string>
+    <string name="theme_name">Nazwa motywu</string>
+    <string name="theme_type">Typ motywu</string>
+    <string name="theme_type_phone">Telefon</string>
+    <string name="theme_type_tablet">Tablet</string>
+    <string name="theme_version">Wersja</string>
+    <string name="theme_author">Autor</string>
+    <string name="theme_description">Opis</string>
+    <string name="theme_export_action">Eksportuj</string>
+    <string name="theme_import_action">Importuj</string>
+    <string name="theme_import_confirm">Czy na pewno chcesz zaimportować ten motyw?</string>
+    <string name="theme_info">Informacje o motywie</string>
+    <!-- Grid Working Card Background -->
+    <string name="settings_grid_working_card_background">Tło karty roboczej</string>
+    <string name="settings_grid_working_card_background_enabled">Niestandardowe tło karty włączone</string>
+    <string name="settings_grid_working_card_background_summary">Niestandardowy obraz tła dla karty roboczej</string>
+    <string name="settings_grid_working_card_background_selected">Wybrano tło</string>
+    <string name="settings_clear_grid_working_card_background">Wyczyść tło karty</string>
+    <string name="settings_clear_grid_working_card_background_confirm">Czy na pewno chcesz wyczyścić obraz tła karty?</string>
+    <string name="settings_grid_working_card_background_saved">Tło karty zapisane pomyślnie</string>
+    <string name="settings_grid_working_card_background_error">Nie udało się zapisać tła karty</string>
+    <string name="settings_grid_working_card_background_cleared">Tło karty wyczyszczone</string>
 </resources>

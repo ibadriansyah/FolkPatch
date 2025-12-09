@@ -22,12 +22,28 @@ object BackgroundConfig {
         private set
     var customBackgroundDim: Float by mutableStateOf(0.2f)
         private set
+
+    // Grid Layout Working Card Background
+    var gridWorkingCardBackgroundUri: String? by mutableStateOf(null)
+        private set
+    var isGridWorkingCardBackgroundEnabled: Boolean by mutableStateOf(false)
+        private set
+    var gridWorkingCardBackgroundOpacity: Float by mutableStateOf(1.0f)
+        private set
+    var gridWorkingCardBackgroundDim: Float by mutableStateOf(0.3f)
+        private set
     
     private const val PREFS_NAME = "background_settings"
     private const val KEY_CUSTOM_BACKGROUND_URI = "custom_background_uri"
     private const val KEY_CUSTOM_BACKGROUND_ENABLED = "custom_background_enabled"
     private const val KEY_CUSTOM_BACKGROUND_OPACITY = "custom_background_opacity"
     private const val KEY_CUSTOM_BACKGROUND_DIM = "custom_background_dim"
+    
+    private const val KEY_GRID_WORKING_CARD_BACKGROUND_URI = "grid_working_card_background_uri"
+    private const val KEY_GRID_WORKING_CARD_BACKGROUND_ENABLED = "grid_working_card_background_enabled"
+    private const val KEY_GRID_WORKING_CARD_BACKGROUND_OPACITY = "grid_working_card_background_opacity"
+    private const val KEY_GRID_WORKING_CARD_BACKGROUND_DIM = "grid_working_card_background_dim"
+
     private const val TAG = "BackgroundConfig"
     
     /**
@@ -37,12 +53,41 @@ object BackgroundConfig {
         customBackgroundUri = uri
         isCustomBackgroundEnabled = uri != null
     }
+
+    /**
+     * 更新Grid布局工作中卡片背景URI
+     */
+    fun updateGridWorkingCardBackgroundUri(uri: String?) {
+        gridWorkingCardBackgroundUri = uri
+        isGridWorkingCardBackgroundEnabled = uri != null
+    }
     
     /**
      * 启用/禁用自定义背景
      */
     fun setCustomBackgroundEnabledState(enabled: Boolean) {
         isCustomBackgroundEnabled = enabled
+    }
+
+    /**
+     * 启用/禁用Grid布局工作中卡片背景
+     */
+    fun setGridWorkingCardBackgroundEnabledState(enabled: Boolean) {
+        isGridWorkingCardBackgroundEnabled = enabled
+    }
+
+    /**
+     * 设置Grid布局工作中卡片背景不透明度
+     */
+    fun setGridWorkingCardBackgroundOpacityValue(opacity: Float) {
+        gridWorkingCardBackgroundOpacity = opacity
+    }
+
+    /**
+     * 设置Grid布局工作中卡片背景暗度
+     */
+    fun setGridWorkingCardBackgroundDimValue(dim: Float) {
+        gridWorkingCardBackgroundDim = dim
     }
 
     /**
@@ -69,6 +114,11 @@ object BackgroundConfig {
             putBoolean(KEY_CUSTOM_BACKGROUND_ENABLED, isCustomBackgroundEnabled)
             putFloat(KEY_CUSTOM_BACKGROUND_OPACITY, customBackgroundOpacity)
             putFloat(KEY_CUSTOM_BACKGROUND_DIM, customBackgroundDim)
+            
+            putString(KEY_GRID_WORKING_CARD_BACKGROUND_URI, gridWorkingCardBackgroundUri)
+            putBoolean(KEY_GRID_WORKING_CARD_BACKGROUND_ENABLED, isGridWorkingCardBackgroundEnabled)
+            putFloat(KEY_GRID_WORKING_CARD_BACKGROUND_OPACITY, gridWorkingCardBackgroundOpacity)
+            putFloat(KEY_GRID_WORKING_CARD_BACKGROUND_DIM, gridWorkingCardBackgroundDim)
             apply()
         }
     }
@@ -83,12 +133,22 @@ object BackgroundConfig {
         val opacity = prefs.getFloat(KEY_CUSTOM_BACKGROUND_OPACITY, 0.5f)
         val dim = prefs.getFloat(KEY_CUSTOM_BACKGROUND_DIM, 0.2f)
         
+        val gridUri = prefs.getString(KEY_GRID_WORKING_CARD_BACKGROUND_URI, null)
+        val gridEnabled = prefs.getBoolean(KEY_GRID_WORKING_CARD_BACKGROUND_ENABLED, false)
+        val gridOpacity = prefs.getFloat(KEY_GRID_WORKING_CARD_BACKGROUND_OPACITY, 1.0f)
+        val gridDim = prefs.getFloat(KEY_GRID_WORKING_CARD_BACKGROUND_DIM, 0.3f)
+        
         Log.d(TAG, "加载背景配置: URI=$uri, enabled=$enabled, opacity=$opacity, dim=$dim")
         
         customBackgroundUri = uri
         isCustomBackgroundEnabled = enabled
         customBackgroundOpacity = opacity
         customBackgroundDim = dim
+        
+        gridWorkingCardBackgroundUri = gridUri
+        isGridWorkingCardBackgroundEnabled = gridEnabled
+        gridWorkingCardBackgroundOpacity = gridOpacity
+        gridWorkingCardBackgroundDim = gridDim
     }
     
     /**
@@ -99,6 +159,11 @@ object BackgroundConfig {
         isCustomBackgroundEnabled = false
         customBackgroundOpacity = 0.5f
         customBackgroundDim = 0.2f
+        
+        gridWorkingCardBackgroundUri = null
+        isGridWorkingCardBackgroundEnabled = false
+        gridWorkingCardBackgroundOpacity = 1.0f
+        gridWorkingCardBackgroundDim = 0.3f
     }
 }
 
@@ -107,23 +172,47 @@ object BackgroundConfig {
  */
 object BackgroundManager {
     private const val TAG = "BackgroundManager"
-    private const val APATCH_EXTERNAL_DIR = "Apatch"
-    
+    private const val BACKGROUND_FILENAME = "background.jpg"
+    private const val GRID_WORKING_CARD_BACKGROUND_FILENAME = "grid_working_card_background.jpg"
+
     /**
-     * 获取外部存储目录
+     * 获取文件扩展名
      */
-    private fun getExternalStorageDir(context: Context): File? {
+    private fun getFileExtension(context: Context, uri: Uri): String {
         return try {
-            // 使用应用专用的外部存储目录
-            val externalDir = File(context.getExternalFilesDir(null), APATCH_EXTERNAL_DIR)
-            if (!externalDir.exists()) {
-                externalDir.mkdirs()
+            val mimeType = context.contentResolver.getType(uri)
+            when {
+                mimeType?.contains("gif", true) == true -> ".gif"
+                mimeType?.contains("png", true) == true -> ".png"
+                mimeType?.contains("webp", true) == true -> ".webp"
+                else -> ".jpg"
             }
-            Log.d(TAG, "外部存储目录: ${externalDir.absolutePath}")
-            externalDir
         } catch (e: Exception) {
-            Log.e(TAG, "获取外部存储目录失败: ${e.message}", e)
-            null
+            ".jpg"
+        }
+    }
+
+    /**
+     * 获取背景文件
+     */
+    private fun getBackgroundFile(context: Context, extension: String = ".jpg"): File {
+        return File(context.filesDir, "background$extension")
+    }
+
+    private fun getGridWorkingCardBackgroundFile(context: Context, extension: String = ".jpg"): File {
+        return File(context.filesDir, "grid_working_card_background$extension")
+    }
+
+    /**
+     * 清理旧的背景文件
+     */
+    private fun clearOldFiles(context: Context, baseName: String) {
+        val extensions = listOf(".jpg", ".png", ".gif", ".webp")
+        extensions.forEach { ext ->
+            val file = File(context.filesDir, "$baseName$ext")
+            if (file.exists()) {
+                file.delete()
+            }
         }
     }
     
@@ -133,20 +222,51 @@ object BackgroundManager {
     suspend fun saveAndApplyCustomBackground(context: Context, uri: Uri): Boolean {
         return try {
             withContext(Dispatchers.IO) {
-                val externalUri = copyImageToExternalStorage(context, uri)
-                if (externalUri != null) {
-                    Log.d(TAG, "图片复制成功，外部URI: $externalUri")
-                    BackgroundConfig.updateCustomBackgroundUri(externalUri.toString())
+                val extension = getFileExtension(context, uri)
+                // 清理旧文件
+                clearOldFiles(context, "background")
+                
+                val savedUri = saveImageToInternalStorage(context, uri, getBackgroundFile(context, extension))
+                if (savedUri != null) {
+                    Log.d(TAG, "图片保存成功，URI: $savedUri")
+                    BackgroundConfig.updateCustomBackgroundUri(savedUri.toString())
                     BackgroundConfig.save(context)
                     Log.d(TAG, "背景配置保存成功，URI: ${BackgroundConfig.customBackgroundUri}, 启用状态: ${BackgroundConfig.isCustomBackgroundEnabled}")
                     true
                 } else {
-                    Log.e(TAG, "图片复制失败")
+                    Log.e(TAG, "图片保存失败")
                     false
                 }
             }
         } catch (e: Exception) {
             Log.e(TAG, "保存自定义背景失败: ${e.message}", e)
+            false
+        }
+    }
+
+    /**
+     * 保存并应用Grid布局工作中卡片背景
+     */
+    suspend fun saveAndApplyGridWorkingCardBackground(context: Context, uri: Uri): Boolean {
+        return try {
+            withContext(Dispatchers.IO) {
+                val extension = getFileExtension(context, uri)
+                // 清理旧文件
+                clearOldFiles(context, "grid_working_card_background")
+                
+                val savedUri = saveImageToInternalStorage(context, uri, getGridWorkingCardBackgroundFile(context, extension))
+                if (savedUri != null) {
+                    Log.d(TAG, "Grid卡片图片保存成功，URI: $savedUri")
+                    BackgroundConfig.updateGridWorkingCardBackgroundUri(savedUri.toString())
+                    BackgroundConfig.save(context)
+                    true
+                } else {
+                    Log.e(TAG, "Grid卡片图片保存失败")
+                    false
+                }
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "保存Grid卡片自定义背景失败: ${e.message}", e)
             false
         }
     }
@@ -156,23 +276,34 @@ object BackgroundManager {
      */
     fun clearCustomBackground(context: Context) {
         try {
-            // 删除外部存储的背景文件
-            BackgroundConfig.customBackgroundUri?.let { uriString ->
-                val uri = Uri.parse(uriString)
-                val path = uri.path
-                if (path != null) {
-                    val file = File(path)
-                    if (file.exists()) {
-                        file.delete()
-                    }
-                }
-            }
+            // 删除背景文件
+            clearOldFiles(context, "background")
             
-            // 重置配置
-            BackgroundConfig.reset()
+            // 重置配置（只重置全局背景相关）
+            BackgroundConfig.updateCustomBackgroundUri(null)
+            BackgroundConfig.setCustomBackgroundEnabledState(false)
             BackgroundConfig.save(context)
         } catch (e: Exception) {
             Log.e(TAG, "清除自定义背景失败: ${e.message}", e)
+        }
+    }
+
+    /**
+     * 清除Grid布局工作中卡片背景
+     */
+    fun clearGridWorkingCardBackground(context: Context) {
+        try {
+            // 删除背景文件
+            clearOldFiles(context, "grid_working_card_background")
+            
+            // 重置配置
+            BackgroundConfig.updateGridWorkingCardBackgroundUri(null)
+            BackgroundConfig.setGridWorkingCardBackgroundEnabledState(false)
+            BackgroundConfig.setGridWorkingCardBackgroundOpacityValue(1.0f)
+            BackgroundConfig.setGridWorkingCardBackgroundDimValue(0.3f)
+            BackgroundConfig.save(context)
+        } catch (e: Exception) {
+            Log.e(TAG, "清除Grid卡片自定义背景失败: ${e.message}", e)
         }
     }
     
@@ -184,17 +315,15 @@ object BackgroundManager {
     }
     
     /**
-     * 复制图片到外部存储
+     * 保存图片到内部存储
      */
-    private suspend fun copyImageToExternalStorage(context: Context, uri: Uri): Uri? {
+    private suspend fun saveImageToInternalStorage(context: Context, uri: Uri, targetFile: File): Uri? {
         return withContext(Dispatchers.IO) {
             try {
-                val apatchDir = getExternalStorageDir(context) ?: return@withContext null
                 val inputStream = context.contentResolver.openInputStream(uri) ?: return@withContext null
-                val fileName = "custom_background_${System.currentTimeMillis()}.jpg"
-                val file = File(apatchDir, fileName)
+                // val file = getBackgroundFile(context) // Use targetFile instead
 
-                FileOutputStream(file).use { outputStream ->
+                FileOutputStream(targetFile).use { outputStream ->
                     val buffer = ByteArray(8 * 1024)
                     var read: Int
                     while (inputStream.read(buffer).also { read = it } != -1) {
@@ -204,12 +333,15 @@ object BackgroundManager {
                 }
                 inputStream.close()
 
-                // 直接返回文件URI
-                val fileUri = Uri.fromFile(file)
-                Log.d(TAG, "图片复制成功，文件URI: $fileUri")
+                // 返回带时间戳的URI，确保Compose重组
+                val fileUri = Uri.fromFile(targetFile).buildUpon()
+                    .appendQueryParameter("t", System.currentTimeMillis().toString())
+                    .build()
+                    
+                Log.d(TAG, "图片保存成功，文件URI: $fileUri")
                 fileUri
             } catch (e: Exception) {
-                Log.e(TAG, "复制图片到外部存储失败: ${e.message}", e)
+                Log.e(TAG, "保存图片到内部存储失败: ${e.message}", e)
                 null
             }
         }

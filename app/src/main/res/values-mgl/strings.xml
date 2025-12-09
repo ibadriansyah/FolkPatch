@@ -402,4 +402,46 @@
     <!-- Auto-added missing strings -->
     <string name="settings_simple_kernel_version_mode_summary">隐藏魔法卡片中的星之版本信息</string>
     <string name="settings_simple_kernel_version_mode">简约星之版本模式</string>
+
+    <!-- Home Layout Strings -->
+    <string name="settings_home_layout_style">魔法大厅布局样式</string>
+    <string name="settings_home_layout_default">ListUI</string>
+    <string name="settings_home_layout_grid">GridUI</string>
+    
+    <!-- Unofficial Version Strings -->
+    <string name="unofficial_version_title">非正统魔法工坊✨</string>
+    <string name="unofficial_version_message">你所使用的FolkPatch并非星界认证的正统魔法工坊~ 请前往官方魔法屋获取正版工坊，以避免魔法反噬或契约失效！</string>
+    <string name="go_to_github">前往Github星界魔法屋~☆</string>
+    <string name="settings_save_theme">封印魔法主题</string>
+    <string name="settings_import_theme">唤醒魔法主题</string>
+    <string name="settings_theme_saved">魔法主题已封印</string>
+    <string name="settings_theme_imported">魔法主题已唤醒</string>
+    <string name="settings_theme_save_failed">封印魔法主题失败</string>
+    <string name="settings_theme_import_failed">唤醒魔法主题失败</string>
+
+    <!-- Theme Strings -->
+    <string name="theme_export_title">封印魔法主题</string>
+    <string name="theme_import_title">唤醒魔法主题</string>
+    <string name="theme_name">魔法主题真名</string>
+    <string name="theme_type">魔法类型</string>
+    <string name="theme_type_phone">魔导手机</string>
+    <string name="theme_type_tablet">魔导石板</string>
+    <string name="theme_version">魔法等级</string>
+    <string name="theme_author">创造者</string>
+    <string name="theme_description">魔法描述</string>
+    <string name="theme_export_action">封印</string>
+    <string name="theme_import_action">唤醒</string>
+    <string name="theme_import_confirm">确定要唤醒此魔法主题吗？</string>
+    <string name="theme_info">魔法主题情报</string>
+
+    <!-- Grid Working Card Background -->
+    <string name="settings_grid_working_card_background">魔法契约卡片背景</string>
+    <string name="settings_grid_working_card_background_enabled">魔法卡片背景已生效</string>
+    <string name="settings_grid_working_card_background_summary">为契约卡片施加自定义幻象</string>
+    <string name="settings_grid_working_card_background_selected">幻象已选定</string>
+    <string name="settings_clear_grid_working_card_background">解除卡片幻象</string>
+    <string name="settings_clear_grid_working_card_background_confirm">确定要解除卡片上的幻象吗？</string>
+    <string name="settings_grid_working_card_background_saved">卡片幻象保存成功</string>
+    <string name="settings_grid_working_card_background_error">卡片幻象保存失败</string>
+    <string name="settings_grid_working_card_background_cleared">卡片幻象已解除</string>
 </resources>

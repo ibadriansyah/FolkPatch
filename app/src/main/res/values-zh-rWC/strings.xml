@@ -401,4 +401,44 @@
     <string name="settings_simple_kernel_version_mode_summary">启此式，隐仙门事宜仙笺之详述</string>
     <string name="settings_simple_kernel_version_mode">简约道核篇次之式</string>
     <string name="app_title_magicpatch">MagicPatch</string>
+
+    <!-- Home Layout Strings -->
+    <string name="settings_home_layout_style">仙府主殿布局</string>
+    <string name="settings_home_layout_default">ListUI</string>
+    <string name="settings_home_layout_grid">GridUI</string>
+    
+    <!-- Unofficial Version Strings -->
+    <string name="unofficial_version_title">非官制版</string>
+    <string name="unofficial_version_message">君所用之FolkPatch非官制所出，请下载官制正版应用！</string>
+    <string name="go_to_github">往Github处</string>
+    <string name="settings_save_theme">藏仙府色章</string>
+    <string name="settings_import_theme">引仙府色章</string>
+    <string name="settings_theme_saved">仙府色章已藏</string>
+    <string name="settings_theme_imported">仙府色章已引</string>
+    <string name="settings_theme_save_failed">藏仙府色章败陨</string>
+    <string name="settings_theme_import_failed">引仙府色章败陨</string>
+
+    <!-- Theme Strings -->
+    <string name="theme_export_title">拓印仙府色章</string>
+    <string name="theme_import_title">引入仙府色章</string>
+    <string name="theme_name">色章名讳</string>
+    <string name="theme_type">色章品阶</string>
+    <string name="theme_type_phone">传音玉简</string>
+    <string name="theme_type_tablet">留影宝鉴</string>
+    <string name="theme_version">色章篇次</string>
+    <string name="theme_author">炼制者</string>
+    <string name="theme_description">色章玄义</string>
+    <string name="theme_export_action">拓印</string>
+    <string name="theme_import_action">引入</string>
+    <string name="theme_import_confirm">道友确欲引入此仙府色章乎？</string>
+    <string name="theme_info">色章天机</string>
+    <string name="settings_grid_working_card_background">本命法宝卡片法相</string>
+    <string name="settings_grid_working_card_background_enabled">卡片法相已激活</string>
+    <string name="settings_grid_working_card_background_summary">为本命卡片凝练自定义法相</string>
+    <string name="settings_grid_working_card_background_selected">法相已选定</string>
+    <string name="settings_clear_grid_working_card_background">散去卡片法相</string>
+    <string name="settings_clear_grid_working_card_background_confirm">道友确欲散去此卡片法相乎？</string>
+    <string name="settings_grid_working_card_background_saved">卡片法相凝练成功</string>
+    <string name="settings_grid_working_card_background_error">卡片法相凝练失败</string>
+    <string name="settings_grid_working_card_background_cleared">卡片法相已散去</string>
 </resources>

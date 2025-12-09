@@ -27,15 +27,34 @@ import java.util.Locale
 import kotlin.concurrent.thread
 import kotlin.system.exitProcess
 
+import coil.ImageLoader
+import coil.ImageLoaderFactory
+import coil.decode.GifDecoder
+import coil.decode.ImageDecoderDecoder
+import coil.util.DebugLogger
+
 lateinit var apApp: APApplication
 
 const val TAG = "APatch"
 
-class APApplication : Application(), Thread.UncaughtExceptionHandler {
+class APApplication : Application(), Thread.UncaughtExceptionHandler, ImageLoaderFactory {
     lateinit var okhttpClient: OkHttpClient
 
     init {
         Thread.setDefaultUncaughtExceptionHandler(this)
+    }
+
+    override fun newImageLoader(): ImageLoader {
+        return ImageLoader.Builder(this)
+            .components {
+                if (Build.VERSION.SDK_INT >= 28) {
+                    add(ImageDecoderDecoder.Factory())
+                } else {
+                    add(GifDecoder.Factory())
+                }
+            }
+            .logger(DebugLogger())
+            .build()
     }
 
     enum class State {
@@ -81,7 +100,8 @@ class APApplication : Application(), Thread.UncaughtExceptionHandler {
         const val SP_NAME = "config"
         private const val SHOW_BACKUP_WARN = "show_backup_warning"
         lateinit var sharedPreferences: SharedPreferences
-
+        var isSignatureValid = true
+        
         private val logCallback: CallbackList<String?> = object : CallbackList<String?>() {
             override fun onAddElement(s: String?) {
                 Log.d(TAG, s.toString())
@@ -266,16 +286,9 @@ class APApplication : Application(), Thread.UncaughtExceptionHandler {
         }
 
         Log.d(TAG, "Checking app signature...")
-        if (!BuildConfig.DEBUG && false && !verifyAppSignature("1x2twMoHvfWUODv7KkRRNKBzOfEqJwRKGzJpgaz18xk=")) {
+        if (!BuildConfig.DEBUG && !verifyAppSignature("a9eba5b702eb55fb5f4b1a672a7133a16a7bcaea949cde43c812ef26c77de812")) {
             Log.e(TAG, "App signature verification failed!")
-            while (true) {
-                val intent = Intent(Intent.ACTION_DELETE)
-                intent.data = "package:$packageName".toUri()
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
-                startActivity(intent)
-                exitProcess(0)
-            }
+            isSignatureValid = false
         }
         Log.d(TAG, "App signature verification passed")
 
