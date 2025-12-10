@@ -150,7 +150,7 @@
     <string name="su_hide_system_apps">Ukryj aplikacje systemowe</string>
     <string name="su_refresh">Odśwież</string>
 
-    <string name="apm">APModule</string>
+    <string name="apm">Module</string>
     <string name="apm_not_installed">AndroidPatch nie jest zainstalowany</string>
     <string name="apm_failed_to_enable">Nie udało się włączyć modułu: %s</string>
     <string name="apm_failed_to_disable">Nie udało się wyłączyć modułu: %s</string>

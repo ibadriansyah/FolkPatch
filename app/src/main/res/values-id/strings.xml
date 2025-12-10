@@ -2,70 +2,90 @@
 <resources>
     <string name="app_name" translatable="false">Salsa-Patch</string>
 
-    <string name="settings_apm_stay_on_page">Tetap di halaman operasi</string>
-    <string name="settings_apm_stay_on_page_summary">Jangan kembali secara otomatis setelah menjalankan operasi modul</string>
     <string name="home">Beranda</string>
+
     <string name="success">Berhasil</string>
     <string name="failure">Gagal</string>
-    <string name="patch_warnning">Instalasi memiliki risiko. Pastikan data telah dicadangkan.</string>
+
+    <string name="patch_warnning">Pemasangan memiliki resiko. Pastikan data Anda sudah dicadangkan.</string>
     <string name="patch">Patch</string>
+
     <string name="kernel_patch">KernelPatch</string>
     <string name="android_patch">AndroidPatch</string>
-    <string name="reboot">Mulai Ulang</string>
+
+    <string name="reboot">Reboot</string>
     <string name="settings">Pengaturan</string>
-    <string name="reboot_recovery">Mulai ulang ke Recovery</string>
-    <string name="reboot_bootloader">Mulai ulang ke Bootloader</string>
-    <string name="reboot_download">Mulai ulang ke Download Mode</string>
-    <string name="reboot_edl">Mulai ulang ke EDL Mode</string>
-    <string name="about">Tentang APatch</string>
+    <string name="reboot_recovery">Reboot ke Recovery</string>
+    <string name="reboot_bootloader">Reboot ke Bootloader</string>
+    <string name="reboot_download">Reboot ke Download</string>
+    <string name="reboot_edl">Reboot ke EDL</string>
+    <string name="about">Tentang</string>
     <string name="settings_app_language">Bahasa</string>
-    <string name="system_default">Default Sistem</string>
-    <string name="settings_global_namespace_mode">Mode Namespace Global</string>
-    <string name="settings_global_namespace_mode_summary">Semua sesi root akan menggunakan namespace mount global</string>
-    <string name="settings_clear_super_key_dialog">Apakah Anda yakin ingin melanjutkan?</string>
-    <string name="home_learn_apatch">Tentang APatch</string>
-    <string name="home_click_to_learn_apatch">Klik di sini untuk fitur dan penggunaan APatch</string>
-    <string name="settings_hide_apatch_card">Sembunyikan kartu "Tentang APatch"</string>
-    <string name="settings_hide_apatch_card_summary">Mengatur apakah akan menampilkan kartu "Tentang APatch" di layar beranda</string>
-    <string name="about_source_code"><![CDATA[<p>Lihat kode sumber di %1$s<p>Bergabung dengan saluran %2$s<p/>Bergabung dengan grup %3$s]]></string>
-    <string name="send_log">Kirim Log</string>
-    <string name="save_log">Simpan Log</string>
-    <string name="log_saved">Log telah disimpan</string>
-    <string name="safe_mode">Mode Aman (Safe Mode)</string>
+    <string name="system_default">Bawaan sistem</string>
+    <string name="settings_global_namespace_mode">Mode namespace global</string>
+    <string name="settings_global_namespace_mode_summary">Semua sesi root menggunakan namespace mount global</string>
+    <string name="settings_clear_super_key_dialog">Apakah Anda benar-benar ingin melanjutkan?</string>
+
+    <string name="su_exclude_all_title">Kecualikan Semua</string>
+    <string name="su_exclude_all_confirm">Apakah Anda yakin ingin mengecualikan semua aplikasi non-root?</string>
+    <string name="su_batch_exclude_title">Kecualikan Massal</string>
+    <string name="su_batch_exclude_content">Kecualikan injeksi untuk semua aplikasi non-ROOT, pilih tindakan</string>
+    <string name="su_exclude_btn">Kecualikan</string>
+    <string name="su_exclude_reverse_btn">Balikkan</string>
+
+    <string name="home_learn_apatch">Pelajari Salsa-Patch</string>
+    <string name="home_click_to_learn_apatch">Pelajari tentang fitur-fitur APatch dan cara menggunakannya</string>
+    <string name="settings_hide_apatch_card">Sembunyikan kartu Pelajari APatch</string>
+    <string name="settings_hide_apatch_card_summary">Sembunyikan kartu Pelajari APatch di layar beranda</string>
+
+    <string name="about_source_code"><![CDATA[<p>Lihat kode sumber di %1$s<p/>Bergabunglah dengan saluran %2$s kami<p/>Bergabunglah dengan grup %3$s kami]]></string>
+    <string name="send_log">Kirim log</string>
+    <string name="save_log">Simpan log</string>
+    <string name="log_saved">Log tersimpan</string>
+    <string name="safe_mode">Mode aman</string>
+
     <string name="super_key">SuperKey</string>
     <string name="clear_super_key">Hapus SuperKey</string>
     <string name="patch_set_superkey">Atur SuperKey</string>
-    <string name="home_patch_set_key_desc">Hanya kredensial KernelPatch</string>
-    <string name="home_patch_next_step">Berikutnya</string>
-    <string name="home_not_installed">Belum Terinstal</string>
-    <string name="home_install_unknown">Tidak Diketahui</string>
-    <string name="home_install_unknown_summary">Ketuk untuk menginstal</string>
+    <string name="home_patch_set_key_desc">Hanya kredensial untuk KernelPatch</string>
+    <string name="home_patch_next_step">Langkah selanjutnya</string>
+
+    <string name="home_not_installed">Belum terinstal</string>
+    <string name="home_install_unknown">Belum terinstal atau terautentikasi</string>
+    <string name="home_install_unknown_summary">Klik untuk menginstal</string>
     <string name="home_click_to_install">Klik untuk menginstal</string>
-    <string name="home_working">Berjalan</string>
+    <string name="home_working">Berfungsi</string>
     <string name="home_kp_need_update">Versi baru tersedia</string>
     <string name="home_kp_cando_update">Perbarui</string>
-    <string name="home_installing">Menginstal...</string>
+
+    <string name="home_installing">Menginstal</string>
+
     <string name="kpatch_version">Versi: %s</string>
     <string name="apatch_version">Versi: %s</string>
-    <string name="kpatch_version_update" formatted="false">Versi: %s → %s</string>
+
+    <string name="kpatch_version_update" formatted="false">Versi: %s -&gt; %s</string>
     <string name="kpatch_shadow_path_title">kpatch</string>
     <string name="home_auth_key_title">Masukkan SuperKey</string>
-    <string name="home_auth_key_desc">Mulai setelah autentikasi</string>
-    <string name="home_kpatch_info_title">Informasi</string>
+    <string name="home_auth_key_desc">Mulai setelah sertifikasi</string>
+    <string name="home_kpatch_info_title">Info</string>
+
     <string name="home_ap_cando_install">Instal</string>
-    <string name="home_ap_cando_uninstall">Copot Instalasi</string>
-    <string name="home_ap_cando_reboot">Mulai Ulang</string>
+
+    <string name="home_ap_cando_uninstall">Copot</string>
+    <string name="home_ap_cando_reboot">Reboot</string>
+
     <string name="patch_title">Patch</string>
-    <string name="patch_config_title">Konfigurasi Patch</string>
+
+    <string name="patch_config_title">Patch</string>
     <string name="patch_mode_bootimg_patch">Mode: Patch</string>
-    <string name="patch_mode_patch_and_install">Mode: Patch dan Instal</string>
-    <string name="patch_mode_install_to_next_slot">Mode: Instal ke slot tidak aktif (setelah OTA)</string>
+    <string name="patch_mode_patch_and_install">Mode: Patch dan instal</string>
+    <string name="patch_mode_install_to_next_slot">Mode: Instal ke slot tidak aktif (Setelah OTA)</string>
     <string name="patch_mode_uninstall_patch">Mode: Copot KPatch</string>
-    <string name="patch_select_bootimg_btn">Pilih boot.img</string>
-    <string name="patch_embed_kpm_btn">Sertakan KPM</string>
+    <string name="patch_select_bootimg_btn">Pilih boot</string>
+    <string name="patch_embed_kpm_btn">Sematkan KPM</string>
     <string name="patch_start_patch_btn">Mulai</string>
-    <string name="patch_start_unpatch_btn">Hapus Patch</string>
-    <string name="patch_item_error">!! ERROR !!</string>
+    <string name="patch_start_unpatch_btn">UnPatch</string>
+    <string name="patch_item_error">!!KESALAHAN!!</string>
     <string name="patch_item_bootimg">bootimg</string>
     <string name="patch_item_bootimg_slot">Slot:</string>
     <string name="patch_item_bootimg_dev">Perangkat:</string>
@@ -74,158 +94,175 @@
     <string name="patch_item_kpimg_version">Versi:</string>
     <string name="patch_item_kpimg_comile_time">Waktu:</string>
     <string name="patch_item_kpimg_config">Konfigurasi:</string>
-    <string name="patch_item_new_extra_kpm">Sertakan Baru</string>
-    <string name="patch_item_existed_extra_kpm">Telah Diatur</string>
+    <string name="patch_item_new_extra_kpm">Sematkan baru</string>
+    <string name="patch_item_existed_extra_kpm">Sudah ada</string>
     <string name="patch_item_extra_name">Nama:</string>
     <string name="patch_item_extra_version">Versi:</string>
-    <string name="patch_item_extra_author">Pembuat:</string>
+    <string name="patch_item_extra_author">Penulis:</string>
     <string name="patch_item_extra_kpm_license">Lisensi:</string>
     <string name="patch_item_extra_kpm_desciption">Deskripsi:</string>
     <string name="patch_item_extra_args">Argumen:</string>
     <string name="patch_item_extra_event">Acara:</string>
     <string name="patch_item_skey">SuperKey</string>
-    <string name="patch_item_set_skey_label">Panjang SuperKey harus 8-63 karakter, dapat mencakup angka dan huruf, tetapi tidak boleh karakter khusus.</string>
-    <string name="home_kernel">Kernel</string>
-    <string name="home_manager_version">Versi Aplikasi</string>
-    <string name="home_fingerprint">Sidik Jari (Fingerprint)</string>
+    <string name="patch_item_set_skey_label">SuperKey harus sepanjang 8-63 karakter dan mencakup angka dan huruf, tetapi tidak ada karakter khusus.</string>
+
+    <string name="home_kernel">Versi kernel</string>
+    <string name="home_manager_version">Versi manajer</string>
+    <string name="home_fingerprint">Sidik jari</string>
+
     <string name="home_selinux_status">Status SELinux</string>
-    <string name="home_selinux_status_disabled">Dinonaktifkan</string>
+    <string name="home_selinux_status_disabled">Permissive</string>
     <string name="home_selinux_status_enforcing">Enforcing</string>
-    <string name="home_selinux_status_permissive">Permissive</string>
-    <string name="home_selinux_status_unknown">Tidak Diketahui</string>
+    <string name="home_selinux_status_permissive">Permisif</string>
+    <string name="home_selinux_status_unknown">Tidak diketahui</string>
+
     <string name="home_device_info">Perangkat</string>
-    <string name="home_system_version">Versi Sistem</string>
+    <string name="home_system_version">Versi sistem</string>
     <string name="home_kpatch_version">Versi KernelPatch</string>
-    <string name="home_su_path">jalur su</string>
-    <string name="home_apatch_version">Versi FolkPatch</string>
+    <string name="home_su_path">Executable su</string>
+    <string name="home_apatch_version">Versi Salsa-Patch</string>
+
     <string name="kpm">KPModule</string>
-    <string name="kpm_kp_not_installed">KernelPatch tidak terinstal</string>
+    <string name="kpm_kp_not_installed">KernelPatch belum terinstal</string>
     <string name="kpm_add_kpm">Tambah KPM</string>
-    <string name="kpm_load">Muat (Load)</string>
+    <string name="kpm_load">Muat</string>
     <string name="kpm_install">Instal</string>
-    <string name="kpm_embed">Tanamkan</string>
-    <string name="kpm_load_toast_succ">Berhasil memuat</string>
-    <string name="kpm_load_toast_failed">Gagal memuat</string>
-    <string name="kpm_unload_confirm">Apakah Anda ingin melepas (unload) modul \\"%s\\" ?</string>
-    <string name="kpm_unload">Lepas (Unload)</string>
+    <string name="kpm_embed">Sematkan</string>
+    <string name="kpm_load_toast_succ">Pemuatan berhasil</string>
+    <string name="kpm_load_toast_failed">Pemuatan gagal</string>
+    <string name="kpm_unload_confirm">Bongkar modul %s?</string>
+    <string name="kpm_unload">Bongkar</string>
     <string name="kpm_control">Kontrol</string>
     <string name="kpm_apm_empty">Tidak ada modul yang dimuat</string>
     <string name="kpm_version">Versi</string>
     <string name="kpm_license">Lisensi</string>
-    <string name="kpm_author">Pembuat</string>
+    <string name="kpm_author">Penulis</string>
     <string name="kpm_desc">Deskripsi</string>
-    <string name="kpm_args">Parameter</string>
+    <string name="kpm_args">Argumen</string>
+
     <string name="su_title">Superuser</string>
-    <string name="su_selinux_via_hook">Lewati melalui Hook</string>
-    <string name="su_pkg_excluded_label">Dikecualikan</string>
-    <string name="su_pkg_excluded_setting_title">Pengecualian Modifikasi</string>
-    <string name="su_pkg_excluded_setting_summary">Jika diaktifkan, APatch dapat memulihkan semua file yang diubah oleh modul untuk aplikasi ini.</string>
-    <string name="su_batch_exclude_title">Pengecualian Massal</string>
-    <string name="su_batch_exclude_content">Kecualikan injeksi aplikasi non-root secara massal. Silakan pilih operasi.</string>
-    <string name="su_exclude_btn">Kecualikan</string>
-    <string name="su_exclude_reverse_btn">Balikkan</string>
+    <string name="su_selinux_via_hook">Lewati via hook</string>
+    <string name="su_pkg_excluded_label">Kecualikan</string>
+    <string name="su_pkg_excluded_setting_title">Kecualikan modifikasi</string>
+    <string name="su_pkg_excluded_setting_summary">Mengaktifkan opsi ini akan memungkinkan APatch memulihkan file apa pun yang dimodifikasi oleh modul aplikasi ini.</string>
     <string name="su_show_system_apps">Tampilkan aplikasi sistem</string>
     <string name="su_hide_system_apps">Sembunyikan aplikasi sistem</string>
     <string name="su_refresh">Segarkan</string>
-    <string name="apm">APModule</string>
-    <string name="apm_not_installed">AndroidPatch tidak terinstal</string>
-    <string name="apm_failed_to_enable">Gagal mengaktifkan modul \\"%s\\"</string>
-    <string name="apm_failed_to_disable">Gagal menonaktifkan modul \\"%s\\"</string>
+
+    <string name="apm">Modul</string>
+    <string name="apm_not_installed">AndroidPatch belum terinstal</string>
+    <string name="apm_failed_to_enable">Gagal mengaktifkan modul: %s</string>
+    <string name="apm_failed_to_disable">Gagal menonaktifkan modul: %s</string>
     <string name="apm_empty">Tidak ada modul yang terinstal</string>
-    <string name="apm_remove">Copot Instalasi</string>
+    <string name="apm_remove">Hapus</string>
     <string name="apm_install">Instal</string>
-    <string name="apm_uninstall_confirm">Copot instalasi modul \\"%s\\" ?</string>
-    <string name="apm_uninstall_success">Berhasil mencopot %s</string>
-    <string name="apm_uninstall_failed">Gagal mencopot %s</string>
+    <string name="apm_uninstall_confirm">Copot modul %s?</string>
+    <string name="apm_uninstall_success">%s dicopot</string>
+    <string name="apm_uninstall_failed">Gagal mencopot: %s</string>
     <string name="apm_version">Versi</string>
-    <string name="apm_author">Pembuat</string>
+    <string name="apm_author">Penulis</string>
     <string name="apm_desc">Deskripsi</string>
-    <string name="apm_overlay_fs_not_available">Modul tidak dapat digunakan karena OverlayFS dinonaktifkan oleh kernel.</string>
-    <string name="apm_magisk_conflict">Modul tidak dapat digunakan karena konflik dengan Magisk.</string>
-    <string name="apm_reboot_to_apply">Mulai ulang untuk menerapkan</string>
-    <string name="apm_changelog">Log Perubahan</string>
+    <string name="apm_overlay_fs_not_available">Modul tidak tersedia karena OverlayFS dinonaktifkan oleh kernel!</string>
+    <string name="apm_magisk_conflict">Modul tidak tersedia karena ada konflik dengan Magisk!</string>
+    <string name="apm_reboot_to_apply">Reboot agar diterapkan</string>
+    <string name="apm_changelog">Log perubahan</string>
     <string name="apm_update">Perbarui</string>
-    <string name="apm_downloading">Mengunduh modul \\"%s\\"...</string>
-    <string name="apm_start_downloading">Mulai mengunduh %s</string>
-    <string name="apm_new_version_available">Versi baru %s tersedia. Klik untuk memperbarui.</string>
-    <string name="hide_apatch_manager">Sembunyikan APatch Manager</string>
+    <string name="apm_downloading">Mengunduh modul: %s</string>
+    <string name="apm_start_downloading">Mulai mengunduh: %s</string>
+    <string name="apm_new_version_available">Versi baru %s tersedia, klik untuk meningkatkan.</string>
+
+    <string name="hide_apatch_manager">Sembunyikan Manajer APatch</string>
     <string name="hide_apatch_manager_summary">Instal aplikasi proxy dengan ID paket acak dan label aplikasi kustom</string>
-    <string name="hide_apatch_dialog_new_manager_name">Nama Manager Baru</string>
-    <string name="hide_apatch_dialog_summary">Ini akan digunakan sebagai nama aplikasi baru di peluncur</string>
-    <string name="hide_apatch_manager_failure">Gagal menyembunyikan aplikasi. Silakan laporkan bug.</string>
+    <string name="hide_apatch_dialog_new_manager_name">Nama manajer baru</string>
+    <string name="hide_apatch_dialog_summary">Ini akan digunakan sebagai label aplikasi baru yang ditampilkan di peluncur</string>
+    <string name="hide_apatch_manager_failure">Gagal menyembunyikan. Harap laporkan bug!</string>
+
     <string name="setting_reset_su_path">Atur ulang jalur su</string>
     <string name="setting_reset_su_new_path">Jalur lengkap baru</string>
-    <string name="apm_webui_open">Buka</string>
-    <string name="apm_action">Aksi</string>
-    <string name="enable_web_debugging">Aktifkan Debugging WebView</string>
-    <string name="enable_web_debugging_summary">Dapat digunakan untuk men-debug Web UI. Aktifkan hanya jika diperlukan.</string>
-    <string name="settings_apm_install_confirm">Konfirmasi sebelum instalasi</string>
-    <string name="settings_apm_install_confirm_summary">Tampilkan dialog konfirmasi sebelum menginstal modul</string>
-    <string name="settings_show_disable_all_modules">Tampilkan tombol "Nonaktifkan Semua Modul"</string>
-    <string name="settings_show_disable_all_modules_summary">Menampilkan tombol di halaman modul untuk menonaktifkan semua modul sekaligus</string>
-    <string name="apm_install_confirm_title">Instal Modul</string>
-    <string name="apm_install_confirm_content">Apakah Anda ingin menginstal %s?</string>
 
+    <string name="apm_webui_open">Buka</string>
+    <string name="apm_action">Tindakan</string>
+    <string name="enable_web_debugging">Aktifkan debug WebView</string>
+    <string name="enable_web_debugging_summary">Dapat digunakan untuk men-debug WebUI. Harap aktifkan hanya saat diperlukan.</string>
+    <string name="settings_apm_install_confirm">Konfirmasi sebelum menginstal</string>
+    <string name="settings_apm_install_confirm_summary">Tampilkan dialog konfirmasi sebelum menginstal modul</string>
+    <string name="settings_apm_stay_on_page">Tetap di halaman operasi</string>
+    <string name="settings_apm_stay_on_page_summary">Jangan otomatis kembali setelah eksekusi tindakan modul</string>
+    <string name="settings_show_disable_all_modules">Tampilkan tombol \'Nonaktifkan Semua Modul\'</string>
+    <string name="settings_show_disable_all_modules_summary">Tampilkan tombol di halaman modul untuk menonaktifkan semua modul sekaligus</string>
+    <string name="apm_install_confirm_title">Instal Modul</string>
+    <string name="apm_install_confirm_content">Apakah Anda yakin ingin menginstal %s?</string>
     <string name="apm_disable_all_title">Nonaktifkan Semua Modul</string>
-    <string name="apm_disable_all_confirm">Nonaktifkan semua modul? Biasanya dilakukan sebelum pembaruan OTA.</string>
+    <string name="apm_disable_all_confirm">Apakah Anda yakin ingin menonaktifkan semua modul? Umumnya, ini dilakukan sebelum pembaruan OTA.</string>
 
     <string name="settings_donot_store_superkey">Jangan simpan SuperKey secara lokal</string>
-    <string name="settings_donot_store_superkey_summary">Verifikasi SuperKey setiap kali Manager dimulai</string>
-    <string name="mode_select_page_title">Instalasi</string>
-    <string name="mode_select_page_patch_and_install">Patch dan Instal</string>
-    <string name="mode_select_page_select_file">Pilih boot image untuk dipatch</string>
-    <string name="mode_select_page_install_inactive_slot">Instal ke slot tidak aktif (setelah OTA)</string>
-    <string name="mode_select_page_install_inactive_slot_warning">Perangkat akan **dipaksa** booting ke slot tidak aktif setelah mulai ulang.\nGunakan opsi ini hanya setelah OTA selesai.\nLanjutkan?</string>
-    <string name="home_dialog_auth_fail_title">Autentikasi Gagal</string>
-    <string name="home_dialog_auth_fail_content">Autentikasi SuperKey gagal, APatch tidak akan berfungsi dengan benar.\nKemungkinan penyebab:\n1. Belum mempatch \"boot.img\" dengan KernelPatch.\n2. Belum mem-flash \"boot.img\" yang telah dipatch.\n3. SuperKey salah.\n4. Perangkat tidak mendukung APatch atau KernelPatch.\n\nSilakan periksa kembali dan coba lagi. Jika masalah berlanjut, ajukan pertanyaan di halaman Issue repositori resmi.</string>
-    <string name="home_more_menu_feedback_or_suggestion">Masukan / Saran</string>
-    <string name="home_more_menu_about">Tentang APatch</string>
-    <string name="home_dialog_uninstall_title">Copot Instalasi</string>
-    <string name="home_dialog_uninstall_ap_only">Copot Patch saja</string>
-    <string name="home_dialog_uninstall_all">Copot Semua</string>
-    <string name="kpm_control_dialog_title">Manajemen KPModule</string>
+    <string name="settings_donot_store_superkey_summary">Autentikasi SuperKey setiap kali manajer dimulai</string>
+
+    <string name="mode_select_page_title">Instal</string>
+    <string name="mode_select_page_patch_and_install">Patch dan instal</string>
+    <string name="mode_select_page_select_file">Pilih boot.img untuk di-patch</string>
+    <string name="mode_select_page_install_inactive_slot">Instal ke slot tidak aktif (Setelah OTA)</string>
+    <string name="mode_select_page_install_inactive_slot_warning">Perangkat Anda **DIPAKSA** untuk boot ke slot tidak aktif saat ini setelah reboot!\n**Hanya** gunakan opsi ini setelah OTA selesai.\nLanjutkan?</string>
+
+    <string name="home_dialog_auth_fail_title">Autentikasi gagal</string>
+    <string name="home_dialog_auth_fail_content">Tidak dapat mengautentikasi SuperKey, oleh karena itu APatch tidak dapat berfungsi dengan baik.\nBerikut beberapa kemungkinan alasan kegagalan autentikasi:\n1. Anda tidak mem-patch boot.img dengan KernelPatch.\n2. boot.img yang di-patch tidak di-flash.\n3. SuperKey salah atau mengandung karakter khusus.\n4. Perangkat Anda tidak mendukung APatch dan KernelPatch.\n\nHarap periksa dan coba lagi. Jika masih ada masalah, Anda selalu dapat mengajukan pertanyaan di halaman isu repositori resmi.</string>
+
+    <string name="home_more_menu_feedback_or_suggestion">Umpan balik atau saran</string>
+    <string name="home_more_menu_about">Tentang</string>
+
+    <string name="home_dialog_uninstall_title">Copot</string>
+
+    <string name="home_dialog_uninstall_ap_only">Copot patch saja</string>
+    <string name="home_dialog_uninstall_all">Copot sepenuhnya</string>
+
+    <string name="kpm_control_dialog_title">Kontrol KPM</string>
     <string name="kpm_control_dialog_content">Masukkan parameter kontrol:</string>
     <string name="kpm_control_paramters">Parameter</string>
-    <string name="kpm_control_outMsg">Output</string>
+    <string name="kpm_control_outMsg">Keluaran</string>
     <string name="kpm_control_ok">Berhasil!</string>
     <string name="kpm_control_failed">Gagal!</string>
-    <string name="settings_night_mode_follow_sys">Ikuti tema sistem</string>
-    <string name="settings_night_mode_follow_sys_summary">Beralih tema gelap secara otomatis berdasarkan pengaturan sistem</string>
-    <string name="settings_night_theme_enabled">Aktifkan tema gelap</string>
-    <string name="settings_use_system_color_theme">Tema Dinamis</string>
-    <string name="settings_use_system_color_theme_summary">Gunakan tema warna yang dihasilkan sistem dari wallpaper</string>
-    <string name="settings_custom_color_theme">Tema Warna</string>
+
+    <string name="settings_night_mode_follow_sys">Tema gelap mengikuti sistem</string>
+    <string name="settings_night_mode_follow_sys_summary">Alihkan tema gelap secara otomatis berdasarkan pengaturan sistem</string>
+    <string name="settings_night_theme_enabled">Tema gelap</string>
+
+    <string name="settings_use_system_color_theme">Tema warna sistem</string>
+    <string name="settings_use_system_color_theme_summary">Gunakan tema warna yang dihasilkan dari wallpaper oleh sistem</string>
+    <string name="settings_custom_color_theme">Tema warna</string>
+
     <string name="amber_theme">Amber</string>
     <string name="blue_theme">Biru</string>
-    <string name="blue_grey_theme">Biru Abu-abu</string>
+    <string name="blue_grey_theme">Abu-abu Biru</string>
     <string name="brown_theme">Cokelat</string>
-    <string name="cyan_theme">Sian</string>
-    <string name="deep_orange_theme">Oranye Pekat</string>
-    <string name="deep_purple_theme">Ungu Pekat</string>
+    <string name="cyan_theme">Cyan</string>
+    <string name="deep_orange_theme">Jingga Tua</string>
+    <string name="deep_purple_theme">Ungu Tua</string>
     <string name="green_theme">Hijau</string>
-    <string name="indigo_theme">Indigo</string>
+    <string name="indigo_theme">Nila</string>
     <string name="light_blue_theme">Biru Muda</string>
     <string name="light_green_theme">Hijau Muda</string>
     <string name="lime_theme">Lime</string>
-    <string name="orange_theme">Oranye</string>
-    <string name="pink_theme">Merah Muda</string>
+    <string name="orange_theme">Jingga</string>
+    <string name="pink_theme">Merah Jambu</string>
     <string name="purple_theme">Ungu</string>
     <string name="red_theme">Merah</string>
     <string name="sakura_theme">Sakura</string>
     <string name="teal_theme">Teal</string>
     <string name="yellow_theme">Kuning</string>
-    <string name="about_app_desc">Solusi root berbasis kernel yang mendukung modul kernel dan hook fungsi kernel tanpa kompilasi ulang kernel.</string>
+
+    <string name="about_app_desc">Solusi root berbasis kernel yang mendukung modul kernel dan hook fungsi kernel tanpa mengkompilasi ulang kernel.</string>
     <string name="about_powered_by">Didukung oleh %1$s</string>
     <string name="about_telegram_group">Grup Telegram</string>
+
     <string name="online_module_title">Modul Sistem Online</string>
     <string name="online_module_download_start">Mulai mengunduh: %s</string>
     <string name="online_module_download_complete">Unduhan selesai: %s</string>
-    <string name="online_module_download_notification">Mengunduh %s. Periksa progres di panel notifikasi, dan file di folder Download setelah selesai.</string>
+    <string name="online_module_download_notification">Mengunduh %s. Periksa panel notifikasi untuk progres dan folder Download untuk file yang selesai.</string>
 
     <string name="online_kpm_title">Modul Kernel Online</string>
     <string name="online_kpm_download_start">Mulai mengunduh: %s</string>
     <string name="online_kpm_download_complete">Unduhan selesai: %s</string>
-    <string name="online_kpm_download_notification">Mengunduh %s. Periksa progres di panel notifikasi, dan file di folder Download setelah selesai.</string>
+    <string name="online_kpm_download_notification">Mengunduh %s. Periksa panel notifikasi untuk progres dan folder Download untuk file yang selesai.</string>
 
     <string name="crash_handle_title">Laporan Crash</string>
     <string name="crash_handle_copy">Salin</string>
@@ -238,7 +275,7 @@
     <string name="app_title_apatch_folk">APatch Folk</string>
     <string name="app_title_apatchx">APatch X</string>
     <string name="app_title_apatch">APatch</string>
-    <string name="app_title_folkpatch">FolkPatch</string>
+    <string name="app_title_folkpatch">Salsa-Patch</string>
     <string name="app_title_kernelpatch">KernelPatch</string>
     <string name="app_title_supersu">SuperSU</string>
     <string name="app_title_folksu">FolkSU</string>
@@ -247,112 +284,115 @@
     <string name="app_title_magicpatch">MagicPatch</string>
 
     <string name="settings_app_dpi">DPI Aplikasi</string>
-    <string name="settings_lite_mode">Mode Ringan (Lite Mode)</string>
-    <string name="settings_lite_mode_mode_summary">Aktifkan mode ringan untuk meningkatkan performa</string>
+    <string name="settings_lite_mode">Mode Ringan</string>
+    <string name="settings_lite_mode_mode_summary">Aktifkan mode ringan untuk kinerja yang lebih baik</string>
     <string name="settings_force_overlayfs_mode">Paksa Mode OverlayFS</string>
-    <string name="settings_force_overlayfs_mode_summary">Memaksa penggunaan OverlayFS untuk fitur modul</string>
+    <string name="settings_force_overlayfs_mode_summary">Paksa gunakan OverlayFS untuk modul</string>
     <string name="settings_app_title">Judul Aplikasi</string>
     <string name="settings_custom_background">Latar Belakang Kustom</string>
-    <string name="settings_custom_background_enabled">Latar belakang kustom aktif</string>
-    <string name="settings_custom_background_opacity">Opasitas Kartu</string>
-    <string name="settings_custom_background_dim">Kegelapan Latar Belakang</string>
-    <string name="settings_select_background_image">Pilih gambar latar belakang</string>
-    <string name="settings_custom_background_summary">Setel gambar latar belakang kustom</string>
+    <string name="settings_custom_background_enabled">Latar Belakang Kustom Diaktifkan</string>
+    <string name="settings_custom_background_opacity">Opasitas kartu</string>
+    <string name="settings_custom_background_dim">Redup latar belakang</string>
+
+    <string name="settings_custom_font">Font Kustom</string>
+    <string name="settings_select_font_file">Pilih File Font</string>
+    <string name="settings_custom_font_enabled">Font Kustom Diaktifkan</string>
+    <string name="settings_custom_font_summary">Gunakan font TTF kustom untuk aplikasi</string>
+    <string name="settings_font_selected">Font Kustom Dipilih</string>
+    <string name="settings_custom_font_error">Gagal menyimpan file font</string>
+    <string name="settings_custom_font_saved">Font kustom berhasil disimpan</string>
+    <string name="settings_clear_font">Pulihkan Font Bawaan</string>
+    <string name="settings_clear_font_confirm">Apakah Anda yakin ingin memulihkan font bawaan?</string>
+    <string name="settings_font_cleared">Font bawaan dipulihkan</string>
+    <string name="settings_font_select_hint">Pilih file font TTF</string>
+    <string name="settings_select_background_image">Pilih Gambar Latar Belakang</string>
+    <string name="settings_custom_background_summary">Atur gambar latar belakang kustom</string>
     <string name="settings_custom_background_saved">Latar belakang berhasil disimpan</string>
     <string name="settings_custom_background_error">Gagal menyimpan latar belakang</string>
     <string name="settings_background_selected">Latar belakang dipilih</string>
-    <string name="settings_background_image_cleared">Gambar latar belakang dihapus</string>
-    <string name="settings_clear_background">Hapus latar belakang</string>
-    <string name="settings_clear_background_confirm">Hapus gambar latar belakang?</string>
-    <string name="launcher_icon_default">FolkPatch</string>
+    <string name="settings_background_image_cleared">Gambar latar belakang dibersihkan</string>
+    <string name="settings_clear_background">Bersihkan Latar Belakang</string>
+    <string name="settings_clear_background_confirm">Apakah Anda yakin ingin menghapus gambar latar belakang?</string>
+    <string name="settings_launcher_icon">Ikon Peluncur</string>
+    <string name="launcher_icon_salsasu">Salsa-Patch</string>
+    <string name="launcher_icon_default">Salsa-Patch</string>
     <string name="launcher_icon_classic">FolkPatch Anime</string>
     <string name="launcher_icon_apatch">APatch</string>
     <string name="launcher_icon_kernelsu">KernelSU</string>
     <string name="launcher_icon_kernelsu_next">KernelSU Next</string>
-    <string name="launcher_icon_kitsune">Kitsune Mask</string>
+    <string name="launcher_icon_kitsune">Topeng Kitsune</string>
     <string name="launcher_icon_magisk">Magisk</string>
     <string name="launcher_icon_superroot">SuperRoot</string>
-    <string name="su_exclude_all_title">Kecualikan Semua</string>
-    <string name="su_exclude_all_confirm">Kecualikan semua aplikasi tanpa hak root?</string>
-    <string name="kpm_autoload_title">Muat Otomatis KPM</string>
+
+    <string name="kpm_autoload_title">KPM Muat Otomatis</string>
     <string name="kpm_autoload_enabled">Aktifkan muat otomatis</string>
-    <string name="kpm_autoload_enabled_summary">Memuat modul KPM secara otomatis saat aplikasi dimulai</string>
+    <string name="kpm_autoload_enabled_summary">Muat modul KPM secara otomatis saat aplikasi dimulai</string>
     <string name="kpm_autoload_json_config">Konfigurasi JSON</string>
-    <string name="kpm_autoload_json_label">Konfigurasi JSON</string>
+    <string name="kpm_autoload_json_label">JSON Konfigurasi</string>
     <string name="kpm_autoload_json_placeholder">{\n  "enabled": true,\n  "kpmPaths": [\n    "/path/to/module1.kpm",\n    "/path/to/module2.kpm"\n  ]\n}</string>
     <string name="kpm_autoload_json_error">Format JSON tidak valid</string>
-    <string name="kpm_autoload_json_helper">Masukkan JSON yang valid berisi array jalur file KPM</string>
+    <string name="kpm_autoload_json_helper">Masukkan JSON yang valid dengan array jalur file KPM</string>
     <string name="kpm_autoload_save">Simpan Konfigurasi</string>
-    <string name="kpm_autoload_save_confirm">Simpan pengaturan muat otomatis?</string>
+    <string name="kpm_autoload_save_confirm">Simpan konfigurasi muat otomatis?</string>
     <string name="kpm_autoload_save_success">Konfigurasi berhasil disimpan</string>
     <string name="kpm_autoload_save_failed">Gagal menyimpan konfigurasi</string>
     <string name="kpm_autoload_visual_mode">Mode Visual</string>
     <string name="kpm_autoload_json_mode">Mode JSON</string>
     <string name="kpm_autoload_add_kpm">Tambah KPM</string>
     <string name="kpm_autoload_remove_kpm">Hapus</string>
-    <string name="kpm_autoload_kpm_list_title">Daftar Modul KPM</string>
-    <string name="kpm_autoload_no_kpm_added">Tidak ada modul KPM ditambahkan</string>
-    <string name="kpm_autoload_kpm_path">Jalur KPM</string>
-    <string name="kpm_autoload_file_not_found">File tidak ditemukan</string>
-    <string name="kpm_autoload_select_kpm_file">Pilih file KPM</string>
-    <string name="kpm_autoload_first_time_title">Tentang Muat Otomatis KPM</string>
-    <string name="kpm_autoload_first_time_message">Fitur ini memungkinkan pemuatan otomatis sementara semua KPM yang dikonfigurasi saat startup. Pendekatan ini lebih praktis daripada menanamkannya langsung ke kernel.\n\nContohnya, KPM yang mencegah perubahan partisi hanya dapat digunakan sementara; menanamkannya dapat menyebabkan gagal booting. Atau jika Anda tidak ingin mengubah partisi BOOT, Anda dapat menggunakan pengaturan ini untuk memuat modul dengan cepat.\n\nPastikan aplikasi ditutup sepenuhnya lalu dibuka kembali agar perintah dijalankan. Biasanya dimuat saat startup. Layar manager menjadi hitam sesaat adalah normal! Ini menggunakan metode pemuatan latar belakang murni, jadi silakan tarik turun (swipe down) untuk menyegarkan dan memastikan modul dimuat dengan benar!</string>
-    <string name="kpm_autoload_first_time_confirm">Mengerti</string>
-    <string name="kpm_autoload_do_not_show_again">Jangan tampilkan lagi</string>
 
-    <string name="kpm_page_first_time_title">Peringatan</string>
-    <string name="kpm_page_first_time_message">Modul kernel langsung mengubah implementasi Boot. Berbeda dengan modul sistem, tidak ada mekanisme penyelamatan yang baik. Jika terjadi masalah, satu-satunya cara adalah memperbaikinya melalui Fastboot. Sangat disarankan untuk mencoba memuat modul terlebih dahulu dan memastikan tidak ada masalah sebelum menanamkannya ke Boot. Jika modul hanya bisa dimuat dan digunakan, cobalah fitur muat otomatis modul KPM. Jangan gunakan fitur ini jika Anda tidak memahami modul kernel!</string>
+    <string name="apm_backup_title">Cadangkan Modul</string>
+    <string name="apm_restore_title">Pulihkan Modul</string>
+    <string name="apm_backup_success">Pencadangan berhasil</string>
+    <string name="apm_restore_success">Pemulihan berhasil</string>
+    <string name="apm_backup_failed">Pencadangan gagal</string>
+    <string name="apm_restore_failed">Pemulihan gagal</string>
+    <string name="apm_backup_failed_msg">Pencadangan gagal: %s</string>
+    <string name="apm_restore_failed_msg">Pemulihan gagal: %s</string>
 
-    <string name="apm_bulk_install_title">Instalasi Massal APM</string>
+    <string name="apm_bulk_install_title">Instal Massal APM</string>
     <string name="apm_bulk_install_list_title">Daftar Modul</string>
     <string name="apm_bulk_install_add">Tambah Modul</string>
     <string name="apm_bulk_install_empty">Tidak ada modul yang ditambahkan</string>
     <string name="apm_bulk_install_action">Instal Massal</string>
-    <string name="apm_bulk_install_log_title">Log Instalasi Massal</string>
+    <string name="apm_bulk_install_log_title">Log Instal Massal</string>
     <string name="apm_bulk_install_log_start">Memulai instalasi massal...</string>
     <string name="apm_bulk_install_log_installing">Menginstal %s</string>
-    <string name="apm_bulk_install_log_installed">Modul %s telah diinstal.</string>
+    <string name="apm_bulk_install_log_installed">Modul %s terinstal.</string>
     <string name="apm_bulk_install_log_done">Semua operasi selesai.</string>
-    <string name="apm_bulk_install_first_use_text">Fitur ini memungkinkan Anda menginstal beberapa modul sekaligus. Ini adalah metode instalasi cepat, cocok untuk modul yang tidak memerlukan interaksi tombol selama instalasi. Untuk modul yang memerlukan interaksi tombol volume, silakan gunakan instalasi standar.</string>
+    <string name="apm_bulk_install_first_use_text">Fitur ini memungkinkan Anda menginstal beberapa modul sekaligus. Ini adalah metode instalasi cepat yang cocok untuk modul yang tidak melibatkan operasi tombol selama instalasi. Untuk modul yang memerlukan interaksi tombol volume, harap gunakan instalasi standar.</string>
     <string name="apm_bulk_install_remove">Hapus</string>
     <string name="apm_first_use_title">Selamat Datang di Modul Sistem</string>
-    <string name="apm_first_use_text">Selamat datang di Modul Sistem. Di sini kami menggunakan modul yang kompatibel dengan ekosistem Magisk. Dukungan untuk modul Lua mungkin akan ditambahkan di masa depan. Klik tombol di kanan bawah untuk menginstal modul. Anda juga dapat menggunakan installer di bagian atas untuk menginstal modul secara massal. Tersedia fitur pencadangan semua modul sekali klik, tetapi metode ini mungkin tidak cocok untuk semua modul, jadi harap buat cadangan Anda sendiri.</string>
-    <string name="apm_backup_title">Cadangan Modul</string>
-    <string name="apm_restore_title">Pulihkan Modul</string>
-    <string name="apm_backup_success">Berhasil mencadangkan</string>
-    <string name="apm_restore_success">Berhasil memulihkan</string>
-    <string name="apm_backup_failed">Gagal mencadangkan</string>
-    <string name="apm_restore_failed">Gagal memulihkan</string>
-    <string name="apm_backup_failed_msg">Gagal mencadangkan: %s</string>
-    <string name="apm_restore_failed_msg">Gagal memulihkan: %s</string>
+    <string name="apm_first_use_text">Selamat datang di Modul Sistem, ini menggunakan modul yang kompatibel dengan ekosistem Magisk. Di masa depan, dukungan untuk modul Lua mungkin ditambahkan. Klik tombol di sudut kanan bawah untuk menginstal modul. Anda juga dapat menggunakan penginstal di bagian atas untuk menginstal modul secara massal. Fitur untuk mencadangkan semua modul dengan sekali klik juga disediakan, tetapi perhatikan bahwa solusi ini mungkin tidak cocok untuk semua modul, jadi Anda harus membuat cadangan sendiri.</string>
 
-    <string name="settings_custom_font">Font Kustom</string>
-    <string name="settings_select_font_file">Pilih file font</string>
-    <string name="settings_custom_font_enabled">Font kustom aktif</string>
-    <string name="settings_custom_font_summary">Gunakan font TTF kustom</string>
-    <string name="settings_font_selected">Font kustom dipilih</string>
-    <string name="settings_custom_font_error">Gagal menyimpan file font</string>
-    <string name="settings_custom_font_saved">Font kustom berhasil disimpan</string>
-    <string name="settings_clear_font">Kembali ke font default</string>
-    <string name="settings_clear_font_confirm">Kembali ke font default?</string>
-    <string name="settings_font_cleared">Font dikembalikan ke default</string>
-    <string name="settings_font_select_hint">Silakan pilih file font TTF</string>
+    <string name="kpm_autoload_kpm_list_title">Modul KPM</string>
+    <string name="kpm_autoload_no_kpm_added">Tidak ada modul KPM yang ditambahkan</string>
+    <string name="kpm_autoload_kpm_path">Jalur KPM</string>
+    <string name="kpm_autoload_file_not_found">File tidak ditemukan</string>
+    <string name="kpm_autoload_select_kpm_file">Pilih File KPM</string>
+    <string name="kpm_autoload_first_time_title">Tentang KPM Muat Otomatis</string>
+    <string name="kpm_autoload_first_time_message">Fitur ini memungkinkan Anda untuk memuat semua KPM yang dikonfigurasi secara otomatis untuk sementara saat boot. Pendekatan ini lebih nyaman daripada menyematkan langsung ke kernel.\n\nContohnya, KPM yang mencegah modifikasi partisi hanya dapat digunakan sementara, karena penyematan dapat menyebabkan kegagalan boot. Atau jika Anda tidak ingin memodifikasi partisi BOOT, Anda dapat menggunakan konfigurasi ini untuk memuat modul dengan cepat.\n\nPastikan aplikasi ditutup sepenuhnya dan dibuka kembali agar perintah dieksekusi. Umumnya, ini juga akan dimuat saat boot. Adalah normal bagi manajer untuk memiliki layar hitam selama periode waktu tertentu! Ini menggunakan metode pemuatan latar belakang murni, ingatlah untuk menggesek ke bawah secara manual untuk menyegarkan dan memeriksa apakah modul dimuat dengan benar!</string>
+    <string name="kpm_autoload_first_time_confirm">Mengerti</string>
+    <string name="kpm_autoload_do_not_show_again">Jangan tampilkan lagi</string>
 
-    <string name="settings_auto_backup_module">Cadangan Modul Sistem Otomatis</string>
-    <string name="settings_auto_backup_module_summary">Menyimpan salinan file modul ke direktori pribadi secara otomatis saat instalasi</string>
-    <string name="settings_open_backup_dir">Buka direktori cadangan</string>
+    <string name="home_hide_su_path">Sembunyikan jalur executable su</string>
+    <string name="home_hide_kpatch_version">Sembunyikan versi patch kernel</string>
+    <string name="home_hide_fingerprint">Sembunyikan sidik jari</string>
+    <string name="home_hide_su_path_summary">Sembunyikan jalur executable su di kartu info</string>
+    <string name="home_hide_kpatch_version_summary">Sembunyikan versi patch kernel di kartu info</string>
+    <string name="home_hide_fingerprint_summary">Sembunyikan sidik jari di kartu info</string>
+
+    <string name="kpm_page_first_time_title">Peringatan</string>
+    <string name="kpm_page_first_time_message">Modul kernel secara langsung memodifikasi implementasi Boot. Berbeda dengan modul sistem, modul ini tidak memiliki mekanisme pemulihan yang baik. Jika timbul masalah, Anda hanya dapat memperbaikinya dengan masuk ke Fastboot. Disarankan untuk memuat modul terlebih dahulu untuk memastikan tidak ada masalah sebelum menyematkannya ke Boot. Jika suatu modul hanya dapat digunakan dengan memuat, Anda dapat mencoba fitur pemuatan modul KPM otomatis. Jika Anda tidak memahami modul kernel, jangan gunakan fitur ini!</string>
+
+    <string name="settings_simple_kernel_version_mode">Mode Versi Kernel Ringkas</string>
+    <string name="settings_simple_kernel_version_mode_summary">Sembunyikan info versi di kartu kerja saat diaktifkan</string>
+
+    <string name="settings_auto_backup_module">Cadangkan Modul Sistem Secara Otomatis</string>
+    <string name="settings_auto_backup_module_summary">Secara otomatis mencadangkan file modul ke direktori pribadi saat menginstal</string>
+    <string name="settings_open_backup_dir">Buka Direktori Cadangan</string>
     <string name="backup_dir_empty">Direktori cadangan kosong</string>
     <string name="backup_dir_open_failed">Gagal membuka direktori cadangan</string>
-    <string name="auto_backup_failed">Gagal mencadangkan otomatis: %s</string>
-    <string name="auto_backup_success">Berhasil mencadangkan otomatis: %s</string>
-
-    <string name="home_hide_kpatch_version_summary">Sembunyikan versi KernelPatch di kartu informasi</string>
-    <string name="settings_simple_kernel_version_mode_summary">Jika diaktifkan, sembunyikan informasi versi pada kartu status</string>
-    <string name="home_hide_su_path_summary">Sembunyikan jalur su di kartu informasi</string>
-    <string name="home_hide_fingerprint_summary">Sembunyikan sidik jari (fingerprint) di kartu informasi</string>
-    <string name="settings_launcher_icon">Ikon Peluncur</string>
-    <string name="settings_simple_kernel_version_mode">Mode Versi Kernel Sederhana</string>
-    <string name="home_hide_fingerprint">Sembunyikan sidik jari</string>
-    <string name="home_hide_kpatch_version">Sembunyikan versi KernelPatch</string>
-    <string name="home_hide_su_path">Sembunyikan jalur su</string>
+    <string name="auto_backup_failed">Pencadangan otomatis gagal: %s</string>
+    <string name="auto_backup_success">Pencadangan otomatis berhasil: %s</string>
 </resources>

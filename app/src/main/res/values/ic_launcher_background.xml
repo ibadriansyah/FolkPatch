@@ -4,4 +4,5 @@
     <color name="ic_launcher_kitsune_background">#ff004c</color>
     <color name="ic_launcher_magisk_background">#009788</color>
     <color name="ic_launcher_folkpatch_background">#FFFFFF</color>
+    <color name="ic_launcher_salsapatch_background">#00000000</color>
 </resources>

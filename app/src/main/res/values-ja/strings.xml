@@ -127,7 +127,7 @@
     <string name="su_show_system_apps">システムアプリを表示</string>
     <string name="su_hide_system_apps">システムアプリを非表示</string>
     <string name="su_refresh">更新</string>
-    <string name="apm">APModule</string>
+    <string name="apm">Module</string>
     <string name="apm_not_installed">AndroidPatch はインストールされていません</string>
     <string name="apm_failed_to_enable">\\"%s\\" モジュールをオンにできませんでした</string>
     <string name="apm_failed_to_disable">\\"%s\\" モジュールをオフにできませんでした</string>

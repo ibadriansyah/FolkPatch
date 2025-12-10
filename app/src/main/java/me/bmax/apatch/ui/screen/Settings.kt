@@ -95,6 +95,7 @@ import androidx.core.os.LocaleListCompat
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootGraph
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import me.bmax.apatch.APApplication
@@ -1279,6 +1280,9 @@ fun LanguageDialog(showLanguageDialog: MutableState<Boolean>) {
 
     val languages = stringArrayResource(id = R.array.languages)
     val languagesValues = stringArrayResource(id = R.array.languages_values)
+    val context = LocalContext.current
+    val activity = context as? Activity
+    val scope = rememberCoroutineScope()
 
     if (showLanguageDialog.value) {
         BasicAlertDialog(
@@ -1298,16 +1302,22 @@ fun LanguageDialog(showLanguageDialog: MutableState<Boolean>) {
                             headlineContent = { Text(item) },
                             modifier = Modifier.clickable {
                                 showLanguageDialog.value = false
-                                if (index == 0) {
-                                    AppCompatDelegate.setApplicationLocales(
-                                        LocaleListCompat.getEmptyLocaleList()
-                                    )
-                                } else {
-                                    AppCompatDelegate.setApplicationLocales(
-                                        LocaleListCompat.forLanguageTags(
-                                            languagesValues[index]
+                                scope.launch {
+                                    if (index == 0) {
+                                        AppCompatDelegate.setApplicationLocales(
+                                            LocaleListCompat.getEmptyLocaleList()
                                         )
-                                    )
+                                    } else {
+                                        AppCompatDelegate.setApplicationLocales(
+                                            LocaleListCompat.forLanguageTags(
+                                                languagesValues[index]
+                                            )
+                                        )
+                                    }
+                                    // Small delay to ensure locale setting is processed
+                                    kotlinx.coroutines.delay(300)
+                                    // Recreate activity to apply language changes
+                                    activity?.recreate()
                                 }
                             }
                         )

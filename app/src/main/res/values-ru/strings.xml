@@ -154,7 +154,7 @@
     <string name="su_hide_system_apps">Скрыть системные приложения</string>
     <string name="su_refresh">Обновить</string>
 
-    <string name="apm">APModule</string>
+    <string name="apm">Module</string>
     <string name="apm_not_installed">AndroidPatch не установлен</string>
     <string name="apm_failed_to_enable">Не удалось включить модуль: %s</string>
     <string name="apm_failed_to_disable">Не удалось отключить модуль: %s</string>

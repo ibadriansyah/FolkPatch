@@ -51,6 +51,7 @@ object DPIUtils {
         
         if (dpi == DEFAULT_DPI) return context
 
+        // Create a new Configuration from the existing one to preserve locale settings
         val config = Configuration(context.resources.configuration)
         config.densityDpi = dpi
         return context.createConfigurationContext(config)

@@ -146,7 +146,7 @@
     <string name="su_hide_system_apps">隱藏系統應用程式</string>
     <string name="su_refresh">重新整理</string>
 
-    <string name="apm">APModule</string>
+    <string name="apm">Module</string>
     <string name="apm_not_installed">AndroidPatch 尚未安裝</string>
     <string name="apm_failed_to_enable">無法啟用 \"%s\" 模組</string>
     <string name="apm_failed_to_disable">無法停用 \"%s\" 模組</string>
